@@ -1,0 +1,50 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: user-server
+  neo4j:
+    uri: neo4j://localhost:7687
+    authentication:
+      username: neo4j #디폴트 유저 네임이다. 따로 설정 안했으면 똑같이 적어줄것
+      password: 1234 #neo4j 데스크톱 콘솔에서 설정할 수 있다.
+    #      database: neo4jTest # neo4j 데스크톱에서 movies 데이터 베이스를 하나 만들어주자.
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true # 유레카 서비스에 (자신을) 등록 여부
+    fetch-registry: true #레지스트리에 있는 정보를 가져올지, 30초마다 Eureka Client 가 유레카 레지스트리 변경 사항 여부 재확인함
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registry-fetch-interval-seconds: 10 # eureka에게 서비스 정보를 가져오는 주기
+    disable-delta: true # eureka에게 서비스 정보를 가져올때 변경된 내용만 가져온다
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #스프링 부트 애플리케이션에서 제공하는 여러가지 정보를 모니터링
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAZXD2AXE5RPNKJNXO
+      secret-key: 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
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: sgfp
+    stack:
+      auto: false
+
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
+

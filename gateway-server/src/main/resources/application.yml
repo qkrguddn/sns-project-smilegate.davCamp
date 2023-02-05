@@ -1,0 +1,50 @@
+server:
+  port: 8000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - 'gateway'
+  endpoint:
+    gateway:
+      enabled: true
+
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    gateway:
+      routes:
+        - id: user-server
+          predicates:
+            - Path=/user/**
+          uri: http://localhost:8001
+          filters:
+            - RewritePath=/user/(?<path>.*),/$\{path}
+        - id: feed-server
+          predicates:
+            - Path=/feed/**
+          uri: http://localhost:8002
+          filters:
+            - RewritePath=/feed/(?<path>.*),/$\{path}
+        - id: auth-server
+          predicates:
+            - Path=/auth/**
+          uri: http://localhost:8003
+          filters:
+            - RewritePath=/auth/(?<path>.*),/$\{path}
+        - id: graph-server
+          predicates:
+            - Path=/graph/**
+          uri: http://localhost:8004
+          filters:
+            - RewritePath=/graph/(?<path>.*),/$\{path}
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
