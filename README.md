@@ -105,7 +105,6 @@
 - <i>feed-server → 게시물, 스토리, 댓글, 대댓글과 관련된 서비스 </i>
 - <i>user-server → 유저 정보 수정</i>
 - <i>graph-server → 유저간 관계 처리 ex. 팔로우, 차단</i>
-- <i>alarm-server → 푸시(알림) 서비스</i>
 
 ### 📌 graphDB 모델링
 
