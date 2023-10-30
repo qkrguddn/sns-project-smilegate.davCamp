@@ -25,7 +25,7 @@
 | ------ | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 박신형 | [ShinHyeong](https://github.com/ShinHyeong) | <img src="https://img.shields.io/badge/-BE-red"> 팀장, graphDB 모델링, <br/>인증, 팔로잉, 차단, 좋아요, <br/>피드 무한 스크롤링 구현                  |
 | 김다빈 | [dav1n9](https://github.com/dav1n9)         | <img src="https://img.shields.io/badge/-FE-brightgreen"> 모바일 프론트엔드 (안드로이드)                                                               |
-| 박형우 | [qkrguddn](https://github.com/qkrguddn)     | <img src="https://img.shields.io/badge/-BE-red"> MSA, 유저정보 수정, 게시물 CRUD, <br/>댓글, 대댓글, 스토리 조회, <br/>파일 업로드|
+| 박형우 | [qkrguddn](https://github.com/qkrguddn)     | <img src="https://img.shields.io/badge/-BE-red"> MSA, 유저정보 관리, 게시물/댓글/스토리 CRUD, <br/>파일 업로드|
 | 이유성 | [Icarly2701](https://github.com/Icarly2701) | <img src="https://img.shields.io/badge/-FE-brightgreen"> 웹 프론트엔드                                                                                |
 
 <br/>
