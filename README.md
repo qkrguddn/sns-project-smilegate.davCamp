@@ -1,7 +1,7 @@
 # 💻 LikeIT
 
 > 스마일 게이트 개발 캠프 2022 - 윈터 개발 캠프 2기
->
+
 > [Team Notion](https://www.notion.so/devcamp/Future-Potato-94f439e0f265454193002a7c6c1b4172?pvs=4)
 
 ## 💫 프로젝트 소개
